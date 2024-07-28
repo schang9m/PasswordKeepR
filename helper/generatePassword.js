@@ -1,4 +1,4 @@
-function generateRandomString(length = 6, options = { lower: true, upper: true, numbers: true, special: false }) {
+function generatePassword(length = 6, options = { lower: true, upper: true, numbers: true, special: false }) {
   let password = "";
   let characters = "";
 
@@ -36,8 +36,8 @@ function generateRandomString(length = 6, options = { lower: true, upper: true, 
 }
 
 // Example usage:
-console.log(generateRandomString()); // Default length 6 with all options enabled
-console.log(generateRandomString(8)); // Length 8 with all options enabled
-console.log(generateRandomString(12, { lower: true, upper: true, numbers: true, special: true })); // Custom length and options
-console.log(generateRandomString(10, { lower: true, upper: false, numbers: true, special: false })); // Custom length with selected options
-console.log(generateRandomString(10, { lower: false, upper: false, numbers: false, special: false })); // Check if error is working
+console.log(generatePassword()); // Default length 6 with all options enabled
+console.log(generatePassword(8)); // Length 8 with all options enabled
+console.log(generatePassword(12, { lower: true, upper: true, numbers: true, special: true })); // Custom length and options
+console.log(generatePassword(10, { lower: true, upper: false, numbers: true, special: false })); // Custom length with selected options
+console.log(generatePassword(10, { lower: false, upper: false, numbers: false, special: false })); // Check if error is working
