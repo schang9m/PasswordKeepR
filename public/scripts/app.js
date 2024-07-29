@@ -33,7 +33,6 @@ export function generatePassword(length = 6, options = { lower: true, upper: tru
     const randomIndex = Math.floor(Math.random() * charactersLength);
     password += characters.charAt(randomIndex);
   }
-
   return password;
 }
 
