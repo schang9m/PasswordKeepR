@@ -55,9 +55,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Generate the password
     try {
       const password = generatePassword(length, { lower, upper, numbers, special });
-      document.getElementById('passwordOutput').textContent = `Generated Password: ${password}`;
+      document.getElementById('passwordOutput').value = password;
     } catch (error) {
-      document.getElementById('passwordOutput').textContent = `Error: ${error.message}`;
+      document.getElementById('passwordOutput').value = `Error: ${error.message}`;
     }
   });
+});
+
+//copying the password
+document.getElementById('copyButton').addEventListener('click', () => {
+  const passwordCopy = document.getElementById('passwordOutput');
+  passwordCopy.select(); // Select the text
+  document.execCommand('copy'); // Copy the text
+  alert('Password copied to clipboard!');
 });

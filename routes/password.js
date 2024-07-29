@@ -5,4 +5,10 @@ router.get('/', (req, res) => {
   res.render('password');
 });
 
+router.post('/', (req, res) => {
+  const newURL = req.body;
+  console.log(req.body)
+  
+})
+
 module.exports = router;
