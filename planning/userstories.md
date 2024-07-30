@@ -29,4 +29,4 @@
 - /url_username (POST save username and password to db)
 - /url_username/:id/edit (POST edit the password)
 - /url_username/delete (POST delete the url) STRETCH
-*2 orgs 2 users (maybe 3 users with 1 admin) 
+- *2 orgs 2 users (maybe 3 users with 1 admin) 
