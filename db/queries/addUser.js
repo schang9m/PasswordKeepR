@@ -2,6 +2,7 @@ const db = require('../connection');
 
 const addUser_Url = (user_url) => {
   const { username, url, password, organization_id, catergory } = user_url;
+
   // Base query
   let query = 'INSERT INTO url_usernames (username, url, password, organization_id';
   let values = [username, url, password, organization_id];
@@ -13,7 +14,7 @@ const addUser_Url = (user_url) => {
     values.push(catergory);
   } else {
     query += ') VALUES ($1, $2, $3, $4)';
-  
+  }
   query += ' RETURNING *;';
 
   return db.query(query, values);
