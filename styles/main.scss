@@ -8,9 +8,10 @@
 }
 
 body{
-   background-color: #f3f5f9;
+   background-color: #adadad;
 }
 
 @import 'nav';
 @import 'header';
-@import 'mainContent';
+//@import 'wrapper';
+@import 'info';

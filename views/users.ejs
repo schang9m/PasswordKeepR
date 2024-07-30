@@ -1,26 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>SafePass</title>
 
-<head>
-  <title>Users</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/layout.css" />
 
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
-  <link rel="stylesheet" href="/vendor/border-box.css" />
-  <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/layout.css" />
+    <script src="/vendor/jquery-3.0.0.js"></script>
+    <script defer src="/scripts/app.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sidebar">
+        <h2>SafePass</h2>
+        <ul>
+          <li>
+            <a href="http://localhost:8080/"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-create-a-password"></i>Create a
+              password</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-passwords"></i>Passwords</a>
+          </li>
+          <li>
+            <a href="http://localhost:8080/users"><i
+                class="fas fa-users"></i>Users</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-about-us"></i>About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-  <script src="/vendor/jquery-3.0.0.js"></script>
-  <script defer src="/scripts/users.js"></script>
-</head>
+    <header class="header">
+      <h2>Generate a password</h2>
+      <div class="header__user">thomas17<p>LHL</p>
+      </div>
+      <button class="header__button-enter">Logout</button>
+      <img src="https://yt3.googleusercontent.com/5BTJiYa_VE9EPuXAKW88E35EOaY2tcc608iQnjgVpZ-N1dfcufexwmjqtSXWbdnQ6yDOtER7=s900-c-k-c0x00ffffff-no-rj" alt="">
 
-<body>
-  <h1>Users</h1>
-  <button id="fetch-users">Fetch Users via AJAX</button>
-  <ul id="users"></ul>
-</body>
+    </header>
 
-</html>
+    <div class="info">
+      <div class="generatePassword">
+        <h1>Testing</h1>
+          <form id="generateForm">
+            <label for="length">Length:</label>
+            <!-- Add id to get the data easier with getElementById -->
+            <input type="number" id="length" name="length" min="4" value="6" aria-label="Password length">
+
+            <label for="lowercase">Include Lowercase:</label>
+            <input type="checkbox" id="lowercase" name="lowercase" checked aria-label="Include lowercase letters">
+
+            <label for="uppercase">Include Uppercase:</label>
+            <input type="checkbox" id="uppercase" name="uppercase" checked aria-label="Include uppercase letters">
+
+            <label for="number">Include Number:</label>
+            <input type="checkbox" id="number" name="number" checked aria-label="Include numbers">
+
+            <label for="special">Include Special Characters:</label>
+            <input type="checkbox" id="special" name="special" checked aria-label="Include special characters">
+
+            <button type="button" id="generateButton">Generate Password</button>
+          </form>
+          <br>
+          <div class="userinfo">
+            <form action="/password" method="POST" id="name_url">
+              <div class="username">
+                <label for="username">Enter your username:</label>
+                <input class="form-control" type="username" name="username"/>
+              </div>
+              <br>
+              <div class="url">
+                <label for="url">Enter your url:</label>
+                <input class="form-control" type="url" name="url"/>
+              </div>
+              <input class="form-control" name="password" id="passwordOutput"/>
+              <button type="button" id="copyButton">Copy Password</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <br>
+      </div>
+      </div>
+    </body>
+    </html>
+
