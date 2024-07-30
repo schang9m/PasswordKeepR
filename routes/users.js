@@ -18,6 +18,7 @@ router.get('/', (req, res) => {
   database.getUsers(userID)
     .then(data => {
       console.log(data)
+      data.currentuser = userID;
       res.render('users', {data})
     })
     .catch((e) => res.send(e));
