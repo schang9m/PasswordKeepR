@@ -24,18 +24,18 @@
             <a href="http://localhost:8080/"><i class="fas fa-home"></i>Home</a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-create-a-password"></i>Create a
+            <a href="http://localhost:8080/createPass"><i class="fas fa-create-a-password"></i>Create a
               password</a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-passwords"></i>Passwords</a>
+            <a href="http://localhost:8080/passwords"><i class="fas fa-passwords"></i>Passwords</a>
           </li>
           <li>
             <a href="http://localhost:8080/users"><i
                 class="fas fa-users"></i>Users</a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-about-us"></i>About us</a>
+            <a href="http://localhost:8080/about_us"><i class="fas fa-about-us"></i>About us</a>
           </li>
         </ul>
       </div>
@@ -51,46 +51,12 @@
     </header>
 
     <div class="info">
-      <div class="generatePassword">
-        <h1>Testing</h1>
-          <form id="generateForm">
-            <label for="length">Length:</label>
-            <!-- Add id to get the data easier with getElementById -->
-            <input type="number" id="length" name="length" min="4" value="6" aria-label="Password length">
-
-            <label for="lowercase">Include Lowercase:</label>
-            <input type="checkbox" id="lowercase" name="lowercase" checked aria-label="Include lowercase letters">
-
-            <label for="uppercase">Include Uppercase:</label>
-            <input type="checkbox" id="uppercase" name="uppercase" checked aria-label="Include uppercase letters">
-
-            <label for="number">Include Number:</label>
-            <input type="checkbox" id="number" name="number" checked aria-label="Include numbers">
-
-            <label for="special">Include Special Characters:</label>
-            <input type="checkbox" id="special" name="special" checked aria-label="Include special characters">
-
-            <button type="button" id="generateButton">Generate Password</button>
-          </form>
-          <br>
-          <div class="userinfo">
-            <form action="/password" method="POST" id="name_url">
-              <div class="username">
-                <label for="username">Enter your username:</label>
-                <input class="form-control" type="username" name="username"/>
-              </div>
-              <br>
-              <div class="url">
-                <label for="url">Enter your url:</label>
-                <input class="form-control" type="url" name="url"/>
-              </div>
-              <input class="form-control" name="password" id="passwordOutput"/>
-              <button type="button" id="copyButton">Copy Password</button>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </div>
-          <br>
-      </div>
+      <h1>Users tab</h1>
+       <ul>
+        <% data.forEach(user => { %>
+          <li><%= user.name%></li>
+        <% })%>
+       </ul>
       </div>
     </body>
     </html>

@@ -32,7 +32,10 @@ app.use(cookieParser());
 const userApiRoutes = require('./routes/users-api');
 const widgetApiRoutes = require('./routes/widgets-api');
 const usersRoutes = require('./routes/users');
-const passwordRoutes = require('./routes/password');
+const createPasswordRoutes = require('./routes/create_password');
+const passwordRoutes = require('./routes/passwords');
+const aboutUsRoutes = require('./routes/about_us');
+
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -40,7 +43,9 @@ const passwordRoutes = require('./routes/password');
 app.use('/api/users', userApiRoutes);
 app.use('/api/widgets', widgetApiRoutes);
 app.use('/users', usersRoutes);
-app.use('/password', passwordRoutes);
+app.use('/createPass', createPasswordRoutes);
+app.use('/passwords', passwordRoutes);
+app.use('/about_us', aboutUsRoutes);
 // Note: mount other resources here, using the same pattern above
 
 // Home page

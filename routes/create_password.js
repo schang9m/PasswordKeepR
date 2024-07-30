@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 router.use(cookieParser());
 
 router.get('/', (req, res) => {
-  res.render('password');
+  res.render('create_password');
 });
 
 router.post('/', (req, res) => {
@@ -34,6 +34,7 @@ router.post('/', (req, res) => {
         return res.send({ error: "error" });
       }
       res.send("🤗");
+      //change it to redirect to password page
     })
     .catch((e) => res.send(e));
 })

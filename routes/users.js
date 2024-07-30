@@ -8,12 +8,19 @@
 const express = require('express');
 const router  = express.Router();
 const cookieParser = require('cookie-parser');
+const database = require("../db/queries/users");
 
 //adding cookie
 router.use(cookieParser());
 
 router.get('/', (req, res) => {
-  res.render('users');
+  const userID = req.cookies['user_id'];
+  database.getUsers(userID)
+    .then(data => {
+      console.log(data)
+      res.render('users', {data})
+    })
+    .catch((e) => res.send(e));
 });
 
 router.get('/1', (req, res) => {
