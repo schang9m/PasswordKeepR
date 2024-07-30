@@ -8,6 +8,7 @@ const morgan = require('morgan');
 
 const PORT = process.env.PORT || 8080;
 const app = express();
+const cookieParser = require('cookie-parser');
 
 app.set('view engine', 'ejs');
 
@@ -25,7 +26,7 @@ app.use(
   })
 );
 app.use(express.static('public'));
-
+app.use(cookieParser());
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
 const userApiRoutes = require('./routes/users-api');

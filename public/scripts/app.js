@@ -1,6 +1,6 @@
 // Client facing scripts here
 // Function to generate a random password
-export function generatePassword(length = 6, options = { lower: true, upper: true, numbers: true, special: false }) {
+export function generatePassword(length = 6, options = { lower: true, upper: true, numbers: true, special: true }) {
   let password = "";
   let characters = "";
 
@@ -39,7 +39,7 @@ export function generatePassword(length = 6, options = { lower: true, upper: tru
 // Client-side script to handle form interactions
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('generateButton').addEventListener('click', () => {
-    // Get form values
+      // Get form values
     const length = parseInt(document.getElementById('length').value, 10);
     const lower = document.getElementById('lowercase').checked;
     const upper = document.getElementById('uppercase').checked;
