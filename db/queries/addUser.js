@@ -1,17 +1,17 @@
 const db = require('../connection');
 
 const addUser_Url = (user_url) => {
-  const { username, url, password, organization_id, catergory } = user_url;
+  const { username, url, password, organization_id, category } = user_url;
 
   // Base query
   let query = 'INSERT INTO url_usernames (username, url, password, organization_id';
   let values = [username, url, password, organization_id];
   
   // Check if catergory is provided and append to query and values
-  if (catergory !== undefined && catergory !== null) {
-    query += ', catergory) VALUES ($1, $2, $3, $4, $5)';
-    //add catergory into the values array
-    values.push(catergory);
+  if (category !== undefined && category !== null) {
+    query += ', category) VALUES ($1, $2, $3, $4, $5)';
+    //add category into the values array
+    values.push(category);
   } else {
     query += ') VALUES ($1, $2, $3, $4)';
   }
