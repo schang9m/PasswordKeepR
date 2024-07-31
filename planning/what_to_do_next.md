@@ -16,3 +16,4 @@
 - Fixing the wallpaper that is on the public/images
 - add roles to the users Stretch
 - Creating more users Stretch
+- fixing cookie parser on Index, about us and creating password 

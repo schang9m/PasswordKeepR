@@ -1,6 +1,6 @@
 const express = require('express');
 const router  = express.Router();
-const database = require("../db/queries/addUser")
+const database = require("../db/queries/addUser");
 const cookieParser = require('cookie-parser');
 
 //adding cookie
