@@ -11,20 +11,18 @@ $(document).ready(() => {
     // Optionally, hide the message after a few seconds
     setTimeout(() => {
       $('#update').removeClass('show'); // Revert to hidden state
-      window.location.href = "http://localhost:8080/passwords";
+      // window.location.href = "http://localhost:8080/passwords";
+      history.replaceState(null, "", "http://localhost:8080/passwords")
     }, 3000); // Hide after 3 seconds
-    // alert()
   }
   if (deleteParam === "success") {
-    // Show update message
+    // Show delete message
     $('#delete').addClass('show'); // Apply 'show' class
     
     // Optionally, hide the message after a few seconds
     setTimeout(() => {
       $('#delete').removeClass('show'); // Revert to hidden state
-      window.location.href = "http://localhost:8080/passwords";
+      history.replaceState(null, "", "http://localhost:8080/passwords")
     }, 3000); // Hide after 3 seconds
-    // alert()
   }
-
 });
