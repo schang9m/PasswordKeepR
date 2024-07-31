@@ -203,13 +203,16 @@
   }
 
   table {
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
   }
   th, td {
     padding: 8px 12px;
     border: 1px solid #ddd;
     text-align: left;
+  }
+  tr {
+    color: #000000;
   }
   th {
     background-color: #f4f4f4;
@@ -220,4 +223,13 @@
   }
   .actions button {
     cursor: pointer;
+  }
+/* Ensure the delete button has a red background color */
+.actions #deleteBtn {
+    background-color: #dc3545; /* Red background color */
+    color: #fff; /* White text color */
+  }
+  
+  .actions #deleteBtn:hover {
+    background-color: #c82333; /* Darker red for hover effect */
   }
