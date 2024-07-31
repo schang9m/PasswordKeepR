@@ -21,13 +21,24 @@ const updateInfo = (userID, { username, URL, password, category }) => {
 };
 
 const filterByCategory = (userID,category) => {
-  //getting all the data via category
-  return db.query(
-    'SELECT * FROM url_usernames WHERE organization_id = (SELECT organization_id FROM users WHERE id = $1) AND category = $2 ORDER BY id;',
-    [userID, category])
-    .then(data => {
+  //check if category is null or undefined
+  if (category === undefined || category === 'all') {
+    // Query to get all rows where category is NULL
+    return db.query(
+      'SELECT * FROM url_usernames WHERE organization_id = (SELECT organization_id FROM users WHERE id = $1) ORDER BY id;',
+      [userID]
+    ).then(data => {
       return data.rows;
-    })
+    });
+  } else {
+    //getting all the data via category
+    return db.query(
+      'SELECT * FROM url_usernames WHERE organization_id = (SELECT organization_id FROM users WHERE id = $1) AND category = $2 ORDER BY id;',
+      [userID, category])
+      .then(data => {
+        return data.rows;
+      })
+  }
 }
 
 const deleteInfo = (userID) => {

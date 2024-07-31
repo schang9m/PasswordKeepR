@@ -9,7 +9,7 @@
 
 
 ## User stories
-- As a user, I want to add new username for specific website, because I won't forget later on.
+- As a user, I want to  newadd username for specific website, because I won't forget later on.
 - As a user, I want to change password , because I want to update it on regular bases
 - As a user, I want to copy password to clipboard, because it's faster
 - As a user, I want to generate password, because I can't think of unique passwords on all the sites

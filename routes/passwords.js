@@ -16,6 +16,19 @@ router.get('/', (req, res) => {
     .catch((e) => res.send(e));
 });
 
+router.get('/filter', (req, res) => {
+  //using req query to find filter?category= xxx
+  const category = req.query.category || null; // Default to 'all' if no category is specified
+  console.log(category);
+  const userID = req.cookies['user_id'];
+  database.filterByCategory(userID, category)
+    .then(data => {
+      data.currentuser = userID;
+      res.render('passwords', {data})
+    })
+    .catch((e) => res.send(e));
+})
+
 router.post('/update/:id', (req, res) => {
   const urlID = req.params.id;
   database.updateInfo(urlID, req.body)
