@@ -56,12 +56,18 @@
     </header>
 
     <div class="info">
-       <ul>
+      <ul>
         <% data.forEach(user => { %>
-          <li><%= user.name%></li>
-        <% })%>
-       </ul>
-      </div>
-    </body>
-    </html>
+          <li>
+            <strong>Name:</strong> <%= user.name %>
+            <div class="user-details">
+              <p><strong>Contact Number:</strong> <%= user.contact_number %></p>
+              <p><strong>Contact Email:</strong> <%= user.contact_email %></p>
+            </div>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </body>
+</html>
 
