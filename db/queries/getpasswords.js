@@ -20,4 +20,23 @@ const updateInfo = (userID, { username, URL, password, category }) => {
     });
 };
 
-module.exports = { getPassword, updateInfo };
+const filterByCategory = (userID,category) => {
+  //getting all the data via category
+  return db.query(
+    'SELECT * FROM url_usernames WHERE organization_id = (SELECT organization_id FROM users WHERE id = $1) AND category = $2 ORDER BY id;',
+    [userID, category])
+    .then(data => {
+      return data.rows;
+    })
+}
+
+const deleteInfo = (userID) => {
+  return db.query(
+    `DELETE FROM url_usernames WHERE id = $1`,
+    [userID])
+    .then(data => {
+      return data.rows;
+    })
+}
+
+module.exports = { getPassword, updateInfo, filterByCategory, deleteInfo};

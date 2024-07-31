@@ -17,11 +17,23 @@ router.get('/', (req, res) => {
 });
 
 router.post('/update/:id', (req, res) => {
-  const userID = req.params.id;
-  database.updateInfo(userID, req.body)
+  const urlID = req.params.id;
+  database.updateInfo(urlID, req.body)
     .then(() => {
       //to see if we have update the data
       res.redirect('/passwords?update=success');
+    })
+    .catch(err => {
+      res.status(500).send('Error updating user: ' + err.message);
+    });
+})
+
+router.post('/delete/:id', (req, res) => {
+  const urlID = req.params.id;
+  database.deleteInfo(urlID)
+    .then(() => {
+      //to see if we have delete the data
+      res.redirect('/passwords?delete=success');
     })
     .catch(err => {
       res.status(500).send('Error updating user: ' + err.message);
