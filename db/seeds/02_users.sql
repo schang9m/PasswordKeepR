@@ -1,5 +1,36 @@
--- Users table seeds here (Example)
-INSERT INTO users (name, organization_id) VALUES ('Alice', 1);
-INSERT INTO users (name, organization_id) VALUES ('Kira', 1);
-INSERT INTO users (name, organization_id) VALUES ('Bob', 2);
-INSERT INTO users (name, organization_id) VALUES ('Caleb', 2);
+-- Insert additional seed data into the users table
+INSERT INTO users (name, contact_number, contact_email, organization_id)
+VALUES
+    ('Frank', '604-111-2233', 'franklin@example.com', 1),
+    ('Grace', '604-222-3344', 'gracehopper@example.com', 1),
+    ('Bob', '604-333-4455', 'bob@example.com', 2),
+    ('Ivy', '604-444-5566', 'ivyrose@example.com', 1),
+    ('Jack', '604-555-6677', 'jackson@example.com', 1),
+    ('Kara', '604-666-7788', 'karabrown@example.com', 1),
+    ('Liam', '604-777-8899', 'liamneeson@example.com', 1),
+    ('Mia', '604-888-9900', 'miadavis@example.com', 1),
+    ('Noah', '604-999-0011', 'noahwilliams@example.com', 1),
+    ('Olivia', '604-000-1122', 'oliviamartin@example.com', 1),
+    ('Paul', '604-111-2234', 'paulwalker@example.com', 2),
+    ('Quinn', '604-222-3345', 'quinnmiller@example.com', 2),
+    ('Rachel', '604-333-4456', 'racheljones@example.com', 2),
+    ('Steve', '604-444-5567', 'stevejobs@example.com', 2),
+    ('Tina', '604-555-6678', 'tinafey@example.com', 2),
+    ('Ursula', '604-666-7789', 'ursulakern@example.com', 2),
+    ('Victor', '604-777-8890', 'victorhugo@example.com', 2),
+    ('Wendy', '604-888-9901', 'wendysmith@example.com', 2),
+    ('Xander', '604-999-0012', 'xanderpeake@example.com', 2),
+    ('Yara', '604-000-1123', 'yaraross@example.com', 2),
+    ('Zach', '604-111-2235', 'zachbryant@example.com', 2),
+    ('Amelia', '604-222-3346', 'ameliasmith@example.com', 2),
+    ('Benjamin', '604-333-4457', 'benjaminmorris@example.com', 2),
+    ('Catherine', '604-444-5568', 'catherinejones@example.com', 2),
+    ('Daniel', '604-555-6679', 'danielclark@example.com', 2),
+    ('Ella', '604-666-7780', 'ellawilliams@example.com', 2),
+    ('Finn', '604-777-8891', 'finnadams@example.com', 2),
+    ('Gina', '604-888-9902', 'ginabrown@example.com', 2),
+    ('Henry', '604-999-0013', 'henrygreen@example.com', 2),
+    ('Irene', '604-000-1124', 'irenegray@example.com', 2),
+    ('Jake', '604-111-2236', 'jakewhite@example.com', 2),
+    ('Kelsey', '604-222-3347', 'kelseywright@example.com', 2),
+    ('Liam', '604-333-4458', 'liamclarke@example.com', 2);
