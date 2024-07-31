@@ -8,10 +8,9 @@ router.use(cookieParser());
 
 router.get('/', (req, res) => {
   const userID = req.cookies['user_id'];
-  console.log(req.body)
   database.getPassword(userID)
     .then(data => {
-      console.log(data)
+      data.currentuser = userID;
       res.render('passwords', {data})
     })
     .catch((e) => res.send(e));
@@ -19,10 +18,10 @@ router.get('/', (req, res) => {
 
 router.post('/update/:id', (req, res) => {
   const userID = req.params.id;
-  console.log(req.body)
   database.updateInfo(userID, req.body)
     .then(() => {
-      res.redirect('/users');
+      //to see if we have update the data
+      res.redirect('/passwords?update=success');
     })
     .catch(err => {
       res.status(500).send('Error updating user: ' + err.message);

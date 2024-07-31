@@ -7,7 +7,8 @@ const cookieParser = require('cookie-parser');
 router.use(cookieParser());
 
 router.get('/', (req, res) => {
-  res.render('about_us');
+  const userID = req.cookies['user_id'];
+  res.render('about_us',{userID});
 });
 
 module.exports = router;

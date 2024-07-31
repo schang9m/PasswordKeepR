@@ -41,8 +41,13 @@
 
         <header class="header">
           <h2></h2>
-          <div class="header__user">thomas17<p>LHL</p>
-          </div>
+          <% if (userID === "1"){ %>
+            <div class="header__user">test123<p>LHL</p>
+            </div>
+          <% } else { %>
+            <div class="header__user">user 3<p>LHL</p>
+            </div>
+          <% } %>          </div>
           <button class="header__button-enter">Logout</button>
           <img src="https://yt3.googleusercontent.com/5BTJiYa_VE9EPuXAKW88E35EOaY2tcc608iQnjgVpZ-N1dfcufexwmjqtSXWbdnQ6yDOtER7=s900-c-k-c0x00ffffff-no-rj" alt="">
 

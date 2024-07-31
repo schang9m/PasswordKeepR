@@ -144,3 +144,10 @@
     width: 110px;
 }
 
+#update {
+    visibility: hidden;
+}
+
+#update .show{
+    visibility: visible;
+}

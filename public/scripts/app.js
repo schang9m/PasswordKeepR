@@ -69,3 +69,18 @@ document.getElementById('copyButton').addEventListener('click', () => {
   document.execCommand('copy'); // Copy the text
   alert('Password copied to clipboard!');
 });
+
+//update the password
+document.addEventListener('DOMContentLoaded', () => {
+  //check the params to see if it's been update
+  const urlParams = new URLSearchParams(window.location.search);
+  const updateParam = urlParams.get('update');
+ 
+  if (updateParam === "success") {
+    //show update info
+    const update = document.getElementById('update');
+    if (update) {
+      update.className = 'show';
+    }
+  }
+});

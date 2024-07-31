@@ -7,7 +7,8 @@ const cookieParser = require('cookie-parser');
 router.use(cookieParser());
 
 router.get('/', (req, res) => {
-  res.render('create_password');
+  const userID = req.cookies['user_id'];
+  res.render('create_password', {userID});
 });
 
 router.post('/', (req, res) => {
@@ -22,18 +23,16 @@ router.post('/', (req, res) => {
     .then(organization => {
       let orgID = Object.values(organization)[0];
       orgID = orgID.toString();
-      console.log(orgID)
       //add the organization id into the newURL
       newURL.organization_id = orgID;
       //pass in the data to add user
-      console.log(newURL)
       return database.addUser_Url(newURL);
     })
     .then((newuser) => {
       if(!newuser) {
         return res.send({ error: "error" });
       }
-      res.send("🤗");
+      res.redirect('/passwords');
       //change it to redirect to password page
     })
     .catch((e) => res.send(e));

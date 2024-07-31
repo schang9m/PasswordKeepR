@@ -53,7 +53,9 @@ app.use('/about_us', aboutUsRoutes);
 // Separate them into separate routes files (see above).
 
 app.get('/', (req, res) => {
-  res.render('index');
+  const userID = req.cookies['user_id'];
+
+  res.render('index',{userID});
 });
 
 app.listen(PORT, () => {
