@@ -9,9 +9,47 @@
     margin-bottom: 15px;
 }
 
-.info .txt {
+@keyframes animateText {
+    0% {
+      transform: scale(1);
+      color: #ffffff;
+    }
+    50% {
+      transform: scale(1.2);
+      color: #ff6347;
+    }
+    100% {
+      transform: scale(1);
+      color: #ffffff;
+    }
+  }
+  
+  .index123{
     font-size: x-large;
+    text-align: center;
+    animation: animateText 3s infinite;
+    margin: 20px;
+    margin-left: 20%;
+    color: #f5f3f3;
+    line-height: 25px;
+    margin-top: 80px;
 }
+
+
+  .info .txt {
+    font-size: x-large;
+    text-align: center;
+    margin-top: 10%;
+    margin-right: 4%;
+  }
+
+  .info .txt a {
+    color: #1e90ff; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: color 0.3s ease; 
+  }
+  
 
 .generatePassword {
     margin-top: 30px;
@@ -28,6 +66,7 @@
     border: 1px solid #000000;
     border-radius: 10px;
     background-color: #525050;
+    margin-right: 50px;
 }
 
 #generateForm label {
@@ -271,10 +310,9 @@
 #infotable {
     display: flex;
     justify-content: center;
-    position: fixed;
+    position:fixed;
     top: 15%;
 }
-
 div .info {
     display: flex;
     justify-content: center;     
@@ -285,6 +323,7 @@ table {
     margin: 20px 0;
     position: fixed;
     left: 15%;
+    background-color: #525050;
     th, td {
         padding: 8px 12px;
         border: 1px solid #ddd;
@@ -332,7 +371,7 @@ table {
   }
   
   #userTable th {
-    background-color: #f07008;;
+    background-color: #2e90f8;
     font-weight: bold;
     color: #000000;
   }
@@ -344,3 +383,5 @@ table {
   #userTable tr:hover {
     background-color: #594f8d;
   }
+
+  
