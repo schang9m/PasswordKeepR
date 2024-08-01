@@ -25,14 +25,15 @@
   }
   
   .index123{
-    font-size: x-large;
+    font-size: 25pt;
+    font-weight: bolder;
     text-align: center;
     animation: animateText 3s infinite;
     margin: 20px;
     margin-left: 20%;
     color: #f5f3f3;
     line-height: 25px;
-    margin-top: 80px;
+    margin-top: 20%; 
 }
 
 
@@ -321,7 +322,7 @@ table {
     width: 80%;
     border-collapse: collapse;
     margin: 20px 0;
-    position: fixed;
+    // position: fixed;
     left: 15%;
     background-color: #525050;
     th, td {
