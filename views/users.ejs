@@ -57,17 +57,24 @@
     </header>
 
     <div class="info">
-      <ul>
-        <% data.forEach(user => { %>
-          <li>
-            <strong>Name:</strong> <%= user.name %>
-            <div class="user-details">
-              <p><strong>Contact Number:</strong> <%= user.contact_number %></p>
-              <p><strong>Contact Email:</strong> <%= user.contact_email %></p>
-            </div>
-          </li>
-        <% }) %>
-      </ul>
+      <table id="userTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Contact Number</th>
+            <th>Contact Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% data.forEach(user => { %>
+            <tr>
+              <td><%= user.name %></td>
+              <td><%= user.contact_number %></td>
+              <td><%= user.contact_email %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
     </div>
   </body>
 </html>

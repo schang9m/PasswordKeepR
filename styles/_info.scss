@@ -337,3 +337,30 @@ table {
   .actions #deleteBtn:hover {
     background-color: #c82333; /* Darker red for hover effect */
   }
+
+  #userTable {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  #userTable th, #userTable td {
+    padding: 12px 15px;
+    border: 1px solid #0a0a0a;
+  }
+  
+  #userTable th {
+    background-color: #f07008;;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  #userTable tr:nth-child(even) {
+    background-color: inherit;
+  }
+  
+  #userTable tr:hover {
+    background-color: #594f8d;
+  }
