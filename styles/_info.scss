@@ -13,18 +13,17 @@
     font-size: x-large;
 }
 
-#generatePassword {
-    margin-top: 20px;
+.generatePassword {
+    margin-top: 30px;
+    display: flex;
+    justify-content:center;
+    gap: 149px;
+    margin-right: 20%;
 }
-#userinfo {
-    margin-top: 20px;
-}
-
 
 #generateForm {
     flex: 1;
-    max-width: 400px;
-    margin-right: auto;
+    max-width: 600px;
     padding: 20px;
     border: 1px solid #000000;
     border-radius: 10px;
@@ -53,7 +52,7 @@
 #generateForm button {
     display: block;
     width: 50%;
-    padding: 10px;
+    padding: 5px;
     background-color: #007BFF;
     color: white;
     border: none;
@@ -67,7 +66,7 @@
     background-color: #0056b3;
 }
 
-#name_url{
+.userinfo{
     flex: 1;
     max-width: 400px;
     margin-right: auto;
@@ -77,13 +76,13 @@
     background-color: #525050;
 }
 
-#name_url label {
+.userinfo label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
 }
 
-#name_url input[type="username"] {
+.username input[type="username"] {
     width: 100%;
     padding: 8px;
     margin-top: 4px;
@@ -91,7 +90,7 @@
     border-radius: 4px;
 }
 
-#name_url input[type="url"] {
+.userinfo input[type="url"] {
     width: 100%;
     padding: 8px;
     margin-top: 4px;
@@ -136,27 +135,7 @@
     background-color: #0056b3;
 }
 
-#form-control {
-    width: auto;
-    height: auto;
-}
 
-.forms-container {
-    display: flex;
-    justify-content:space-evenly;
-    align-items: stretch;
-}
-
-.forms-container > div {
-    flex: 1;
-    margin-right: 20px;
-    margin-top: 25px;
-}
-
-.forms-container > div:last-child {
-    margin-right: 0;
-    margin-top: 41px;
-}
 
 .filter {
     display:flex;
