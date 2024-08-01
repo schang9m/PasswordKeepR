@@ -1,6 +1,6 @@
 .info {
     margin: 20px;
-    margin-left: 20%;
+    margin-left: 10%;
     color: #f5f3f3;
     line-height: 25px;
 }
@@ -57,7 +57,8 @@
     display: flex;
     justify-content:center;
     gap: 149px;
-    margin-right: 20%;
+    margin-left: 3%;
+    max-width: 80%;
 }
 
 #generateForm {
@@ -180,9 +181,8 @@
 .filter {
     display:flex;
     justify-content: center;
-    position: fixed;
-    left: 18%;
-    margin-bottom: 20%;
+    position: relative;
+    margin-left: 10%;
     gap: 40px;
     padding: 5px;
     button {
@@ -311,7 +311,7 @@
 #infotable {
     display: flex;
     justify-content: center;
-    position:fixed;
+    position: relative;
     top: 15%;
 }
 div .info {
@@ -340,7 +340,9 @@ table {
     }
 
 }
-
+#fulluserTable {
+    margin-left: 20%;
+}
   .actions {
     display: flex;
     gap: 10px;
