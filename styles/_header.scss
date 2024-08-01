@@ -18,7 +18,7 @@ h2 {
     height: auto;
     position: absolute;
     top: 18px;
-    right: 16%;
+    right: 6%;
     border-radius: 50%;
 }
 
@@ -29,27 +29,7 @@ h2 {
     top: 18px;
     right: 10%;
     font-size: larger;
-}
-
-.header__button-enter {
-    background-color: rgb(80, 10, 172);;
-    position: absolute;
-    color: #fffdfd;
-    border-radius: 2em;
-    box-sizing: border-box;
-    padding: 0.5em 1.7em;
-    top: 25px;
-    right: 50px;
-    border-color: #000000;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
-    text-align: center;
-    transition: all 0.2s;
-}
-
-.header__button-enter:hover {
-    cursor: pointer;
-    border-color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-style: oblique;
 }
 

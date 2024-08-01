@@ -3,37 +3,26 @@
     margin-left: 20%;
     color: #f5f3f3;
     line-height: 25px;
-    
 }
 
 .info div {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-.info button {
-    background-color: rgb(80, 10, 172);;
-    color: #fffdfd;
-    border-radius: 2em;
-    box-sizing: border-box;
-    padding: 0.5em 1.7em;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
-    text-align: center;
-    transition: all 0.2s;
-    margin-left: 30px;
+.info .txt {
+    font-size: x-large;
 }
 
-.info button:hover {
-    cursor: pointer;
-    border-color: rgb(255, 255, 255);
+#generatePassword {
+    margin-top: 20px;
+}
+#userinfo {
+    margin-top: 20px;
 }
 
-.info .txt {                       //base txt for home and about us
-    font-size:x-large;
-}
 
-#generateForm {                     //form for generate password function
+#generateForm {
+    flex: 1;
     max-width: 400px;
     margin-right: auto;
     padding: 20px;
@@ -78,44 +67,95 @@
     background-color: #0056b3;
 }
 
-.info .userinfo form{                  //form for copy and submit password
+#name_url{
+    flex: 1;
     max-width: 400px;
-    margin-right: 20%;
+    margin-right: auto;
     padding: 20px;
     border: 1px solid #000000;
     border-radius: 10px;
     background-color: #525050;
 }
-.info .userinfo form label {
-    display: flex;
+
+#name_url label {
+    display: block;
     margin-bottom: 8px;
     font-weight: bold;
-    
 }
 
-#copyButton, 
+#name_url input[type="username"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#name_url input[type="url"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#passwordOutput{
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+#category{
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#copyButton,
 .userinfo button[type="submit"] {
-  display: block;
-  width: 50%;
-  padding: 10px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  margin: auto;
+    display: block;
+    width: 50%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: auto;
 }
 
 #generateForm button:hover,
 #copyButton:hover,
 .userinfo button[type="submit"]:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
-#form-control{
+#form-control {
     width: auto;
-  
+    height: auto;
+}
+
+.forms-container {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: stretch;
+}
+
+.forms-container > div {
+    flex: 1;
+    margin-right: 20px;
+    margin-top: 25px;
+}
+
+.forms-container > div:last-child {
+    margin-right: 0;
+    margin-top: 41px;
 }
 
 .filter {
@@ -167,13 +207,6 @@
     }
 }
 
-//passwords list styling 
-.info li    {
-    list-style:circle;
-    list-style-type: disc;
-}
-
-
 
 .info .passwords button{
     background-color: #0056b3;
@@ -217,7 +250,7 @@
     text-align: center;
     font-size: 20pt;
     border-radius: 12px;
-    background-color: #00d1b2;
+    background-color: #0056b3;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     opacity: 1;
     transform: translateY(100%);
