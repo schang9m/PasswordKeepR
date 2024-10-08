@@ -24,17 +24,41 @@
     }
   }
   
-  .index123{
-    font-size: 25pt;
-    font-weight: bolder;
-    text-align: center;
-    animation: animateText 3s infinite;
-    margin: 20px;
-    margin-left: 20%;
-    color: #f5f3f3;
-    line-height: 25px;
-    margin-top: 20%; 
-}
+    .index123 {
+      margin-left: 15%;
+      margin-right: 5%;
+      color: #fff;
+  
+      h1{
+        color: orangered;
+        text-align: center;
+       }
+
+      h2 {
+        text-align: left;
+        color: rgb(244, 128, 50);
+        text-decoration:underline ;
+      }
+  
+      p {
+        font-size: 1.1em;
+        line-height: 1.6;
+      }
+  
+      ul {
+        list-style-type: none;
+        padding: 0;
+  
+        li {
+          margin-bottom: 15px;
+  
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  
 
 
   .info .txt {
@@ -187,7 +211,7 @@
     padding: 5px;
     button {
         border-radius: 4px;
-        background-color: #5ca1e1;
+        background-color: #2e90f8;
         border: none;
         color: #fff;
         text-align: center;
@@ -342,6 +366,7 @@ table {
 }
 #fulluserTable {
     margin-left: 20%;
+    margin-top: 3%;
 }
   .actions {
     display: flex;
@@ -384,7 +409,7 @@ table {
   }
   
   #userTable tr:hover {
-    background-color: #594f8d;
+    background-color: #1e5895;
   }
 
   

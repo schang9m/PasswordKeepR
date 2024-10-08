@@ -1,15 +1,20 @@
-LHL Node Skeleton
+SafePass
 =========
 
-## Project Setup
+SafePass is your company's internal solution for managing and generating secure passwords. Designed to enhance the security of internal systems, SafePass allows team members to create strong, unique passwords and store them securely for easy access. This tool ensures that sensitive company data remains protected while simplifying password management for employees.
 
-The following steps are only for _one_ of the group members to perform.
 
-1. Create your own copy of this repo using the `Use This Template` button, ideally using the name of your project. The repo should be marked Public
-2. Verify that the skeleton code now shows up in your repo on GitHub, you should be automatically redirected
-3. Clone your copy of the repo to your dev machine
-4. Add your team members as collaborators to the project so that they can push to this repo
-5. Let your team members know the repo URL so that they use the same repo (they should _not_ create a copy/fork of this repo since that will add additional workflow complexity to the project)
+## Screenshots 
+
+![About US](public/images/us.png)
+
+![Create a password](public/images/generate%20password.png)
+
+![Users Passwords](public/images/users%20passwords.png)
+
+![Only Social](public/images/only%20social.png)
+
+![Users](public/images/users.png)
 
 
 ## Getting Started
@@ -26,6 +31,8 @@ The following steps are only for _one_ of the group members to perform.
 7. Run the server: `npm run local`
   - Note: nodemon is used, so you should not have to restart your server
 8. Visit `http://localhost:8080/`
+9. Go to http://localhost:8080/users/1  or http://localhost:8080/users/3 first to get the cooki
+
 
 ## Warnings & Tips
 
